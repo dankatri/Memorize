@@ -22,6 +22,7 @@ struct EmojiMemoryGameView: View {
         }
             .foregroundColor(Color.orange)
             .padding()
+        
     }
 }
 
@@ -31,9 +32,8 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             self.body(for: geometry.size)
-            }
+        }
     }
-    
     
     func body(for size: CGSize) -> some View {
         ZStack {
@@ -46,6 +46,7 @@ struct CardView: View {
             }
         
         }
+        
         .font(Font.system(size: fontSize(for: size)))
     }
     
@@ -54,7 +55,7 @@ struct CardView: View {
     let cornerRadius: CGFloat = 10.0
     let edgeLineWidth: CGFloat = 3
     func fontSize(for size: CGSize) -> CGFloat {
-        min(size.width, size.height) * 0.75
+        min(size.width, size.height) * 200
     }
 }
 
